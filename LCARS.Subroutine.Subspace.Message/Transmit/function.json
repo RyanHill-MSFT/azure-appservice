@@ -1,0 +1,12 @@
+{
+  "bindings": [
+    {
+      "name": "message",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "subspace-transmission-queue",
+      "connection": ""
+    }
+  ],
+  "scriptFile": "../dist/Transmit/index.js"
+}
