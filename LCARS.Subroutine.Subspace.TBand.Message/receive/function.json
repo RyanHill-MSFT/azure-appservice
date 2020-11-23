@@ -1,0 +1,13 @@
+{
+    "bindings":[
+        {
+            "type": "signalRTrigger",
+            "name": "transmissionReceived",
+            "hubName": "subspaceRelay",
+            "category": "messages",
+            "event": "SendMessage",
+            "direction": "in"
+        }
+    ],
+    "scriptFile": "../dist/receive/index.js"
+}

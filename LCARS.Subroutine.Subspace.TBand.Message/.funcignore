@@ -3,4 +3,5 @@
 .git*
 .vscode
 local.settings.json
+package-lock.json
 test
