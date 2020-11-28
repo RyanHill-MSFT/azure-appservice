@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LCARS.Database.Logs;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using LCARS.Database;
-using LCARS.Database.Models.Logs;
 using Microsoft.Extensions.Logging;
 
 namespace LCARS.Subroutine.LogRecorder.Controllers

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LCARS.Database.Models.Logs
+namespace LCARS.Database.Logs
 {
     public abstract class Log
     {

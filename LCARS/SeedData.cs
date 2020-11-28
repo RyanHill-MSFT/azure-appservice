@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using LCARS.Database.Models.Logs;
 
-namespace LCARS.Database
+namespace LCARS
 {
     public static class SeedData
     {

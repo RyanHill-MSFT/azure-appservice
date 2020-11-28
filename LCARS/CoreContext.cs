@@ -1,8 +1,8 @@
-﻿using LCARS.Database.Models.Logs;
+﻿using LCARS.Database.Logs;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace LCARS.Database
+namespace LCARS
 {
     public class CoreContext : DbContext
     {

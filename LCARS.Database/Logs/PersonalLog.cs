@@ -1,4 +1,4 @@
-﻿namespace LCARS.Database.Models.Logs
+﻿namespace LCARS.Database.Logs
 {
     public class PersonalLog : Log
     {

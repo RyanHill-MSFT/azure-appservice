@@ -20,7 +20,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\LCARS.Database\LCARS.Database.csproj" />
+      <ProjectReference Include="..\LCARS.Database\LCARS.Database.csproj" />
+      <ProjectReference Include="..\LCARS\LCARS.csproj" />
     </ItemGroup>
 
 </Project>
