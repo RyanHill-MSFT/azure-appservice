@@ -179,6 +179,7 @@ publish/
 # checkin your Azure Web App publish settings, but sensitive information contained
 # in these scripts will be unencrypted
 PublishScripts/
+**/azuredeploy.parameters.json
 
 # NuGet Packages
 *.nupkg
@@ -301,6 +302,15 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
 
 # Cake - Uncomment if you are using it
 # tools/**

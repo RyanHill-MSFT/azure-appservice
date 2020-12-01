@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Personal Log</title>
+</head>
+<body>
+    <section>
+        <header>
+            <h1>Entries</h1>
+            <div class="container">
+                <div>
+                    {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                        <li><p>{{ message }}</p></li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </header>
+        <section>
+            <form action="{{ url_for('record') }}" method="post">
+                {{ form.add_input(placeholder="Enter log entry...") }}
+            </form>
+        </section>
+        <section>
+
+        </section>
+    </section>
+</body>
+</html>
