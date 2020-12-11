@@ -6,9 +6,9 @@ namespace LCARS
 {
     public class CoreContext : DbContext
     {
-        public DbSet<PersonalLog> PersonnelLogs { get; set; }
+        public DbSet<Personal> PersonnelLogs { get; set; }
 
-        public static readonly ILoggerFactory CoreContextFactory = LoggerFactory.Create(builder => { builder.AddDebug(); });
+        public static readonly ILoggerFactory CoreContextFactory = LoggerFactory.Create(builder => builder.AddDebug());
 
         public CoreContext(DbContextOptions<CoreContext> options)
             :base(options)
