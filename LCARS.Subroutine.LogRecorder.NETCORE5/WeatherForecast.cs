@@ -1,6 +1,6 @@
 using System;
 
-namespace LCARS.Subroutine.LogRecorder
+namespace LCARS.Subroutine.PersonalLog
 {
     public class WeatherForecast
     {

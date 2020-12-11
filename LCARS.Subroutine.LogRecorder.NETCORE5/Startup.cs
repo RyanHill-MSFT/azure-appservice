@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 
-namespace LCARS.Subroutine.LogRecorder
+namespace LCARS.Subroutine.PersonalLog
 {
     public class Startup
     {

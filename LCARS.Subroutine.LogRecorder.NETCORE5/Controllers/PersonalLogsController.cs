@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace LCARS.Subroutine.LogRecorder.Controllers
+namespace LCARS.Subroutine.PersonalLog.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -23,14 +23,14 @@ namespace LCARS.Subroutine.LogRecorder.Controllers
 
         // GET: api/PersonalLogs
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<PersonalLog>>> GetPersonalLogs()
+        public async Task<ActionResult<IEnumerable<Personal>>> GetPersonalLogs()
         {
             return await _context.PersonnelLogs.ToListAsync();
         }
 
         // GET: api/PersonalLogs/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<PersonalLog>> GetPersonalLog(int id)
+        public async Task<ActionResult<Personal>> GetPersonalLog(int id)
         {
             var personalLog = await _context.PersonnelLogs.FindAsync(id);
 
@@ -45,7 +45,7 @@ namespace LCARS.Subroutine.LogRecorder.Controllers
         // PUT: api/PersonalLogs/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutPersonalLog(int id, PersonalLog personalLog)
+        public async Task<IActionResult> PutPersonalLog(int id, Personal personalLog)
         {
             if (id != personalLog.Id)
             {
@@ -76,7 +76,7 @@ namespace LCARS.Subroutine.LogRecorder.Controllers
         // POST: api/PersonalLogs
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<PersonalLog>> PostPersonalLog(PersonalLog personalLog)
+        public async Task<ActionResult<Personal>> PostPersonalLog(Personal personalLog)
         {
             _logger.LogInformation("Recording personal log");
             _context.PersonnelLogs.Add(personalLog);

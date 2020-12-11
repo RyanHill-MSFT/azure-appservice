@@ -1,8 +1,8 @@
 ﻿namespace LCARS.Database.Logs
 {
-    public class PersonalLog : Log
+    public class Personal : Log
     {
-        public PersonalLog()
+        public Personal()
         {
             AccessLevel = AccessLevel.Personal;
         }
@@ -11,9 +11,9 @@
 
         public string Officer { get; private set; }
 
-        public static PersonalLog Supplemental(string entry, string officer)
+        public static Personal Supplemental(string entry, string officer)
         {
-            return new PersonalLog
+            return new Personal
             {
                 Entry = entry,
                 Officer = officer,
@@ -21,9 +21,9 @@
             };
         }
 
-        public static PersonalLog CaptainsLog(string entry)
+        public static Personal CaptainsLog(string entry)
         {
-            return new PersonalLog
+            return new Personal
             {
                 Entry = entry,
                 AccessLevel = AccessLevel.Captain

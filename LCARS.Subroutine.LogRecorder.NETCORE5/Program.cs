@@ -1,11 +1,11 @@
 using System;
-using LCARS.Database;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.AzureAppServices;
 
-namespace LCARS.Subroutine.LogRecorder
+namespace LCARS.Subroutine.PersonalLog
 {
     public class Program
     {
@@ -18,6 +18,19 @@ namespace LCARS.Subroutine.LogRecorder
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+                .ConfigureLogging(logging =>
+                {
+                    logging.AddAzureWebAppDiagnostics();
+                })
+                .ConfigureServices(services =>
+                {
+                    services.Configure<AzureFileLoggerOptions>(options =>
+                    {
+                        options.FileName = "lcars-diagnostics-";
+                        options.FileSizeLimit = 50 * 1024;
+                        options.RetainedFileCountLimit = 3;
+                    });
+                })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();

@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace LCARS.Subroutine.LogRecorder.Controllers
+namespace LCARS.Subroutine.PersonalLog.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
