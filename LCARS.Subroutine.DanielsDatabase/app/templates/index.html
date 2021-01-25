@@ -6,28 +6,31 @@
     <title>Personal Log</title>
 </head>
 <body>
-    <section>
+    <section class="personallogapp">
         <header>
             <h1>Entries</h1>
             <div class="container">
                 <div>
+                    {% with messages = get_flashed_messages() %}
                     {% if messages %}
                     <ul>
                         {% for message in messages %}
-                        <li><p>{{ message }}</p></li>
+                        <li>
+                            <p>{{ message }}</p>
+                        </li>
                         {% endfor %}
                     </ul>
                     {% endif %}
+                    {% endwith %}
                 </div>
             </div>
         </header>
         <section>
-            <form action="{{ url_for('record') }}" method="post">
+            <form action="{{ url_for('postLogEntry') }}" method="post">
                 {{ form.add_input(placeholder="Enter log entry...") }}
             </form>
         </section>
         <section>
-
         </section>
     </section>
 </body>

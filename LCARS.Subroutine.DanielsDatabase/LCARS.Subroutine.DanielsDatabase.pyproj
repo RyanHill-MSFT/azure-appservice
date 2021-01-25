@@ -27,9 +27,6 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app\forms\PersonalLogForm.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="app\forms\__init__.py">
       <SubType>Code</SubType>
     </Compile>
@@ -37,6 +34,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="app\routes.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\services\ConnectionManager.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\services\__init__.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="config.py">
@@ -48,10 +51,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".env" />
     <Content Include="app\templates\index.html" />
     <Content Include="azuredeploy.json" />
     <Content Include="azuredeploy.parameters.json" />
     <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\forms\" />
+    <Folder Include="app\models\" />
+    <Folder Include="app\services\" />
+    <Folder Include="app\templates\" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include=".venv\">
@@ -63,12 +74,6 @@
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
       <Architecture>X64</Architecture>
     </Interpreter>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="app\" />
-    <Folder Include="app\forms\" />
-    <Folder Include="app\models\" />
-    <Folder Include="app\templates\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
