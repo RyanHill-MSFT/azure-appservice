@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace LCARS.Subroutine.PersonalLog.Controllers
+namespace LCARS.Interface.Padd.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

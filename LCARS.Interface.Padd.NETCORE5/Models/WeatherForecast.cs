@@ -1,6 +1,6 @@
 using System;
 
-namespace LCARS.Subroutine.PersonalLog.Models
+namespace LCARS.Interface.Padd.Models
 {
     public class WeatherForecast
     {

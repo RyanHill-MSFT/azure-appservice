@@ -5,7 +5,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.AzureAppServices;
 
-namespace LCARS.Subroutine.PersonalLog
+namespace LCARS.Interface.Padd
 {
     public class Program
     {

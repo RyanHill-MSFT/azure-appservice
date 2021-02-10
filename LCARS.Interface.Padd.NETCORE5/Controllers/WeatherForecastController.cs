@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using LCARS.Subroutine.PersonalLog.Models;
+using LCARS.Interface.Padd.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace LCARS.Subroutine.PersonalLog.Controllers
+namespace LCARS.Interface.Padd.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

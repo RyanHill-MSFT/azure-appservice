@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30709.64
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LCARS.Subroutine.PersonalLog", "LCARS.Subroutine.LogRecorder.NETCORE5\LCARS.Subroutine.PersonalLog.csproj", "{6AE0FB2A-7A6A-456C-A9DA-5C80BA079F35}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LCARS", "LCARS\LCARS.csproj", "{DD42E083-3070-4BB6-9C20-385730C52D1E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LCARS.Database", "LCARS.Database\LCARS.Database.csproj", "{34CBD043-63B8-49B7-99A2-E9FCC0FD7981}"
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "LCARS.Subroutine.DanielsDatabase", "LCARS.Subroutine.DanielsDatabase\LCARS.Subroutine.DanielsDatabase.pyproj", "{DFCC2641-B90E-42E6-86F6-701A44A45C70}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LCARS.Interface.Padd", "LCARS.Interface.Padd.NETCORE5\LCARS.Interface.Padd.csproj", "{3DF9C3DE-F0EE-46D8-AED2-B3F3CC99B7D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6AE0FB2A-7A6A-456C-A9DA-5C80BA079F35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6AE0FB2A-7A6A-456C-A9DA-5C80BA079F35}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6AE0FB2A-7A6A-456C-A9DA-5C80BA079F35}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6AE0FB2A-7A6A-456C-A9DA-5C80BA079F35}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DD42E083-3070-4BB6-9C20-385730C52D1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DD42E083-3070-4BB6-9C20-385730C52D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD42E083-3070-4BB6-9C20-385730C52D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{DFCC2641-B90E-42E6-86F6-701A44A45C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFCC2641-B90E-42E6-86F6-701A44A45C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFCC2641-B90E-42E6-86F6-701A44A45C70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DF9C3DE-F0EE-46D8-AED2-B3F3CC99B7D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DF9C3DE-F0EE-46D8-AED2-B3F3CC99B7D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DF9C3DE-F0EE-46D8-AED2-B3F3CC99B7D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DF9C3DE-F0EE-46D8-AED2-B3F3CC99B7D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
