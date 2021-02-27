@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  lcarsnodesdata:
+    image: ryanchill/lcarsnodesdata:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+    volumes:
+      - ${WEBAPP_STORAGE_HOME}/LogFiles:/usr/src/app/logs
