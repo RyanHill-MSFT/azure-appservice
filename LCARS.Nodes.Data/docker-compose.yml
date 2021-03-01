@@ -11,4 +11,4 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ${WEBAPP_STORAGE_HOME}/LogFiles:/usr/src/app/logs
+      - primaryadjunct:/usr/src/app/logs
