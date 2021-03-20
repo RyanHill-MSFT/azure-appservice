@@ -9,7 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Subroutines", "Subroutines", "{591F314A-4F7E-4035-AD3B-792344779AE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LCARS.Core", "LCARS\LCARS.Core\LCARS.Core.csproj", "{829D2261-F4BD-4282-AB7D-CE7A69BCA8AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LCARS.Core", "LCARS\LCARS.Core\LCARS.Core.csproj", "{829D2261-F4BD-4282-AB7D-CE7A69BCA8AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subroutine.LCARS.Core.Initialize", "Subroutine.LCARS.Core.Initialize\Subroutine.LCARS.Core.Initialize.csproj", "{D32EDE9A-DCB1-4834-9ED3-5EF2A301C9B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,12 +23,17 @@ Global
 		{829D2261-F4BD-4282-AB7D-CE7A69BCA8AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{829D2261-F4BD-4282-AB7D-CE7A69BCA8AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{829D2261-F4BD-4282-AB7D-CE7A69BCA8AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D32EDE9A-DCB1-4834-9ED3-5EF2A301C9B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D32EDE9A-DCB1-4834-9ED3-5EF2A301C9B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D32EDE9A-DCB1-4834-9ED3-5EF2A301C9B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D32EDE9A-DCB1-4834-9ED3-5EF2A301C9B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{829D2261-F4BD-4282-AB7D-CE7A69BCA8AF} = {3D47ABF1-89D6-4C6E-BF4A-F82861D1AE58}
+		{D32EDE9A-DCB1-4834-9ED3-5EF2A301C9B5} = {591F314A-4F7E-4035-AD3B-792344779AE6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {41E311C1-F4E1-444C-AFB2-13F83D06D33A}

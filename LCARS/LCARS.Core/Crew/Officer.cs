@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 using LCARS.Core.Logs;
 
@@ -62,6 +63,7 @@ namespace LCARS.Core.Crew
     {
         Science,
         Operations,
-        Command
+        Command,
+        Sciences
     }
 }

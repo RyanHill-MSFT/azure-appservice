@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using LCARS.Core.Logs;
 
-namespace LCARS.Core.Positional
+namespace LCARS.Core.Crew
 {
     public class PersonalLog : Starlog
     {

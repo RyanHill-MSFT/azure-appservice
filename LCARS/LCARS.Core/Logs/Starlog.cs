@@ -18,7 +18,7 @@ namespace LCARS.Core.Logs
 
         public long StarlogId { get; set; }
 
-        public DateTime Startdate { get; }
+        public DateTime Startdate { get; protected set; }
 
         public LogEntryType LogType { get; protected set;  }
 
