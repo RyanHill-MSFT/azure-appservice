@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.218
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LCARS", "LCARS", "{3D47ABF1-89D6-4C6E-BF4A-F82861D1AE58}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", "{4EE38D26-4AB1-4B38-8C89-ED24EFF4CFE1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Subroutines", "Subroutines", "{591F314A-4F7E-4035-AD3B-792344779AE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LCARS.Core", "LCARS\LCARS.Core\LCARS.Core.csproj", "{829D2261-F4BD-4282-AB7D-CE7A69BCA8AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{829D2261-F4BD-4282-AB7D-CE7A69BCA8AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{829D2261-F4BD-4282-AB7D-CE7A69BCA8AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{829D2261-F4BD-4282-AB7D-CE7A69BCA8AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{829D2261-F4BD-4282-AB7D-CE7A69BCA8AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{829D2261-F4BD-4282-AB7D-CE7A69BCA8AF} = {3D47ABF1-89D6-4C6E-BF4A-F82861D1AE58}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41E311C1-F4E1-444C-AFB2-13F83D06D33A}
+	EndGlobalSection
+EndGlobal
