@@ -16,7 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\LCARS\LCARS.Core\LCARS.Core.csproj" />
+      <ProjectReference Include="..\..\LCARS\LCARS.Core\LCARS.Core.csproj" />
     </ItemGroup>
 
     <ItemGroup>
