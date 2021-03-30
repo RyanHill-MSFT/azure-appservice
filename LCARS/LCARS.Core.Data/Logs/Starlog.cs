@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
-using LCARS.Core.Crew;
+using LCARS.Core.Data.Crew;
 
-namespace LCARS.Core.Logs
+namespace LCARS.Core.Data.Logs
 {
     /*
      * https://memory-alpha.fandom.com/wiki/Log
@@ -16,15 +16,13 @@ namespace LCARS.Core.Logs
             Startdate = DateTime.UtcNow;
         }
 
-        public long StarlogId { get; set; }
+        public int Id { get; set; }
+
+        public LogEntryType LogType { get; protected set; }
+
+        public bool Deleted { get; set; }
 
         public DateTime Startdate { get; protected set; }
-
-        public LogEntryType LogType { get; protected set;  }
-
-        public bool? IsDeleted { get; set; }
-
-        public Officer Officer { get; set; }
 
         public string Vessel { get; set; }
     }

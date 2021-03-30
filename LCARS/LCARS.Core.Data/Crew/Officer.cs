@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 using System.Text;
-using LCARS.Core.Logs;
 
-namespace LCARS.Core.Crew
+namespace LCARS.Core.Data.Crew
 {
     public class Officer
     {
-        public string SerialNo { get; set; }
+        public string SerialNo { get; set; } = GenerateSerialNumber();
 
         public StarfleetRank Rank { get; set; }
 
@@ -40,6 +38,13 @@ namespace LCARS.Core.Crew
                 Rank -= 1;
             }
         }
+
+        public static string GenerateSerialNumber()
+        {
+            string[] prefixes = new[] { "SP", "SQ", "SR", "JL", "AR", "KI", "SK", "GH", "CU", "HG", "BL", "OL", "NN", "CX", "WI" };
+            var rnd = new Random();
+            return $"{prefixes[rnd.Next(prefixes.Length)]}-{rnd.Next(999):000}-{rnd.Next(999):000}";
+        }
     }
 
     public enum StarfleetRank
@@ -64,6 +69,7 @@ namespace LCARS.Core.Crew
         Science,
         Operations,
         Command,
-        Sciences
+        Sciences,
+        Medical
     }
 }

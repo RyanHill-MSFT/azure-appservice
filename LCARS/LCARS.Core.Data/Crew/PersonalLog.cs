@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using LCARS.Core.Logs;
+using LCARS.Core.Data.Logs;
 
-namespace LCARS.Core.Crew
+namespace LCARS.Core.Data.Crew
 {
     public class PersonalLog : Starlog
     {
