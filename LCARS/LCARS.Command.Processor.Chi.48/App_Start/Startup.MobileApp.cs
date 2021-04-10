@@ -19,7 +19,6 @@ namespace LCARS.Command.Processor.Chi._48
 
             new MobileAppConfiguration()
                 .UseDefaultConfiguration()
-                .AddTables(new MobileAppTableConfiguration().MapTableControllers().AddEntityFramework())
                 .ApplyTo(config);
 
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<MobileDatabankContext, Configuration>());
