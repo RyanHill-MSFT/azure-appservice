@@ -18,13 +18,13 @@ namespace Subroutine.LCARS.Core.Initialize
             .ConfigureServices((hostContext, services) =>
             {
                 var configuration = hostContext.Configuration;
-                var provider = configuration.GetValue("Provider", "SqlServer");
+                var provider = configuration.GetValue("Provider", "Sqlite").ToLower();
 
                 services.AddDbContext<Databank>(
                     options => _ = provider switch
                     {
-                        "Sqlite" => options.UseSqlite(configuration.GetConnectionString("SqliteConnection")),
-                        "SqlServer" => options.UseSqlServer(configuration.GetConnectionString("SqlServerConnection")),
+                        "sqlite" => options.UseSqlite(configuration.GetConnectionString("SqliteConnection")),
+                        "sqlserver" => options.UseSqlServer(configuration.GetConnectionString("SqlServerConnection"), s => s.MigrationsAssembly("LCARS.Core.Migrations")),
                         _ => throw new InvalidOperationException($"Unsupported provider: {provider}")
                     });
             });

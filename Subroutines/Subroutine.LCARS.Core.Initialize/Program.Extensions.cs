@@ -16,6 +16,7 @@ namespace Subroutine.LCARS.Core.Initialize
                 try
                 {
                     var context = services.GetRequiredService<Databank>();
+                    context.Database.EnsureDeleted();
                     context.Database.EnsureCreated();
                 }
                 catch (Exception ex)

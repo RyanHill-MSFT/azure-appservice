@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using LCARS.Core.Logs;
+using LCARS.Core.Data.Logs;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -15,7 +15,7 @@ namespace LCARS.Core.Configurations.Sql
         {
             builder.ToTable(TableName);
 
-            builder.HasKey(b => b.StarlogId);
+            builder.HasKey(b => b.Id);
         }
     }
 }
