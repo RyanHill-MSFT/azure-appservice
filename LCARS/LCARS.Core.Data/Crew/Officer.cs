@@ -50,17 +50,15 @@ namespace LCARS.Core.Data.Crew
     public enum StarfleetRank
     {
         Crewman,
-        [Description("Ens.")]
+        [Description("Ens")]
         Ensign,
         [Description("Lt")]
         Lieutenant,
-        [Description("Lt. Cmdr.")]
-        LieutenantCommander,
-        [Description("Cmdr.")]
+        [Description("Cmdr")]
         Commander,
-        [Description("Capt.")]
+        [Description("Capt")]
         Captain,
-        [Description("Admr.")]
+        [Description("Admr")]
         Admiral
     }
 

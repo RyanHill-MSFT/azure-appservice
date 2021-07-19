@@ -42,36 +42,32 @@ namespace LCARS.Core.Configurations.Sql
                 new Officer
                 {
                     Department = DepartmentArea.Operations,
-                    Rank = StarfleetRank.LieutenantCommander,
+                    Rank = StarfleetRank.Lieutenant & StarfleetRank.Commander,
                     FirstName = "Data",
-                    SerialNo = Officer.GenerateSerialNumber(),
                     Assignment = "Second Officer"
                 },
                 new Officer
                 {
                     Department = DepartmentArea.Operations,
-                    Rank = StarfleetRank.LieutenantCommander,
+                    Rank = StarfleetRank.Lieutenant & StarfleetRank.Commander,
                     FirstName = "Geordi",
                     LastName = "LaForge",
-                    SerialNo = Officer.GenerateSerialNumber(),
                     Assignment = "Chief Engineer"
                 },
                 new Officer
                 {
                     Department = DepartmentArea.Sciences,
-                    Rank = StarfleetRank.LieutenantCommander,
+                    Rank = StarfleetRank.Lieutenant & StarfleetRank.Commander,
                     FirstName = "Deanna",
                     LastName = "Troi",
-                    SerialNo = Officer.GenerateSerialNumber(),
                     Assignment = "Counselor"
                 },
                 new Officer
                 {
                     Department = DepartmentArea.Medical,
-                    Rank = StarfleetRank.LieutenantCommander,
+                    Rank = StarfleetRank.Lieutenant & StarfleetRank.Commander,
                     FirstName = "Beverly",
                     LastName = "Crusher",
-                    SerialNo = Officer.GenerateSerialNumber(),
                     Assignment = "Chief Medical Officer"
                 }
         };
