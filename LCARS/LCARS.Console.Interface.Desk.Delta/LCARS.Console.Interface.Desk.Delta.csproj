@@ -21,8 +21,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\LCARS\LCARS.Core.Data\LCARS.Core.Data.csproj" />
-        <ProjectReference Include="..\..\LCARS\LCARS.Core\LCARS.Core.csproj" />
+        <ProjectReference Include="..\..\LCARS.Core.Data\LCARS.Core.Data.csproj" />
+        <ProjectReference Include="..\..\LCARS.Core\LCARS.Core.csproj" />
     </ItemGroup>
 
 </Project>
