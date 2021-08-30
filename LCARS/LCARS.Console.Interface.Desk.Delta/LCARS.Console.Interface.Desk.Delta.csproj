@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>net5</TargetFramework>
+        <TargetFramework>net5.0</TargetFramework>
         <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
         <UserSecretsId>aa985785-877f-49bf-bafc-5183e45250c8</UserSecretsId>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
