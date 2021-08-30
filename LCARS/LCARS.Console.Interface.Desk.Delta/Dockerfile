@@ -3,14 +3,21 @@
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /source
 
-COPY *.csproj .
-RUN dotnet restore
+COPY ["LCARS/LCARS.Core/LCARS.Core.csproj", "LCARS/LCARS.Core/"]
+COPY ["LCARS/LCARS.Core.Data/LCARS.Core.Data.csproj", "LCARS/LCARS.Core.Data/"]
+COPY ["LCARS/LCARS.Console.Interface.Desk.Delta/LCARS.Console.Interface.Desk.Delta.csproj", "LCARS/LCARS.Console.Interface.Desk.Delta/"]
+RUN dotnet restore "LCARS/LCARS.Console.Interface.Desk.Delta/LCARS.Console.Interface.Desk.Delta.csproj"
 
-COPY . .
-WORKDIR /source/LCARS.Console.Interface.Desk.Delta
-RUN dotnet publish -c release -o /app --no-restore
+COPY ["LCARS/LCARS.Core//", "LCARS/LCARS.Core/"]
+COPY ["LCARS/LCARS.Core.Data//", "LCARS/LCARS.Core.Data/"]
+COPY ["LCARS/LCARS.Console.Interface.Desk.Delta//", "LCARS/LCARS.Console.Interface.Desk.Delta/"]
+WORKDIR "/source/LCARS/LCARS.Console.Interface.Desk.Delta"
+RUN dotnet build "LCARS.Console.Interface.Desk.Delta.csproj" -c release --no-restore
 
-FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS final
+FROM build as publish
+RUN dotnet publish -c release --no-build -o /app
+
+FROM mcr.microsoft.com/dotnet/runtime:5.0
 WORKDIR /app
-COPY --from=build /app ./
+COPY --from=publish /app ./
 ENTRYPOINT ["dotnet", "LCARS.Console.Interface.Desk.Delta.dll"]
