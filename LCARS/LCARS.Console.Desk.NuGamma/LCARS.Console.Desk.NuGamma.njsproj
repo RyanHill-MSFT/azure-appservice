@@ -32,17 +32,28 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\lcars-nugamma - Web Deploy.pubxml" />
+    <None Include="src\app.ts"/> 
     <None Include="src\server.ts" />
-    <Content Include="src\middleware\logger.ts" />
-    <Content Include="views\home\index.pug" />
-    <Content Include="test\starships.test.ts">
+    <None Include="src\controllers\home.ts" />
+    <None Include="src\middleware\logger.ts" />
+    <None Include="test\starships.test.ts">
       <SubType>Code</SubType>
-    </Content>
+    </None>
+    <Content Include="views\home\index.pug" />
     <Content Include="tsconfig.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="Properties\PublishProfiles\" />
+    <Folder Include="public\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\javascripts\" />
+    <Folder Include="public\stylesheets\" />
     <Folder Include="src\controllers\" />
     <Folder Include="src\middleware\" />
     <Folder Include="src\interfaces\" />
@@ -55,8 +66,8 @@
     <TypeScriptCompile Include="src\app.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="src\controllers\home.controllers.ts" />
-    <TypeScriptCompile Include="src\interfaces\IControllerBase.interface.ts" />
+    <TypeScriptCompile Include="src\controllers\home.ts" />
+    <TypeScriptCompile Include="src\interfaces\IControllerBase.ts" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

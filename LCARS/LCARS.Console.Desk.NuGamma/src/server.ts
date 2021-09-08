@@ -1,7 +1,7 @@
 import App from './app'
 
 import * as bodyParser from 'body-parser'
-import HomeController from './controllers/home.controllers';
+import HomeController from './controllers/home';
 import loggerMiddleware from './middleware/logger';
 
 const port = normalizePort(process.env.PORT || 1337);
@@ -18,7 +18,7 @@ const app = new App({
     controllers: [
         new HomeController()
     ],
-    middleWares: [
+    middlewares: [
         bodyParser.json(),
         bodyParser.urlencoded({ extended: true }),
         loggerMiddleware

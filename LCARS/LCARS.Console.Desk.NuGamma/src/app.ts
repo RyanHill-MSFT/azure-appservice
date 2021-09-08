@@ -5,11 +5,11 @@ class App {
     public app: Application;
     public port: number | string | boolean;
 
-    constructor(appInit: { port: number | string | boolean; middleWares: any; controllers: any; }) {
+    constructor(appInit: { port: number | string | boolean; middlewares: any; controllers: any; }) {
         this.app = express();
         this.port = appInit.port;
 
-        this.middleware(appInit.middleWares);
+        this.middleware(appInit.middlewares);
         this.routes(appInit.controllers);
     }
 
