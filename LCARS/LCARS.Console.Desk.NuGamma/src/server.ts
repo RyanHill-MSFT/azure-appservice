@@ -1,15 +1,10 @@
-import { debug } from "console";
-import * as http from "http";
-import { normalize } from "path";
-import app from "./app";
+import App from './app'
+
+import * as bodyParser from 'body-parser'
+import HomeController from './controllers/home.controllers';
+import loggerMiddleware from './middleware/logger';
 
 const port = normalizePort(process.env.PORT || 1337);
-app.set("port", port);
-
-const server = http.createServer(app);
-server.listen(port);
-server.on("listening", onListening);
-server.on("error", onError);
 
 function normalizePort(value: string | number): number | string | boolean {
     let port: number = (typeof value === 'string') ? parseInt(value, 10) : value;
@@ -18,25 +13,16 @@ function normalizePort(value: string | number): number | string | boolean {
     else return false;
 }
 
-function onError(error: NodeJS.ErrnoException): void {
-    if (error.syscall !== 'listen') throw error;
-    let bind = (typeof port === 'string') ? 'Pipe ' + port : 'Port ' + port;
-    switch (error.code) {
-        case 'EACCES':
-            console.error(`${bind} requires elevated privileges`);
-            process.exit(1);
-            break;
-        case 'EADDRINUSE':
-            console.error(`${bind} is already in use`);
-            process.exit(1);
-            break;
-        default:
-            throw error;
-    }
-}
+const app = new App({
+    port: port,
+    controllers: [
+        new HomeController()
+    ],
+    middleWares: [
+        bodyParser.json(),
+        bodyParser.urlencoded({ extended: true }),
+        loggerMiddleware
+    ]
+})
 
-function onListening(): void {
-    let addr = server.address();
-    let bind = (typeof addr === "string") ? `pipe ${addr}` : `port ${addr.port}`;
-    debug(`Listening on ${bind}`);
-}
+app.listen();

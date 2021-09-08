@@ -1,30 +1,36 @@
-import * as express from "express";
-import * as bodyParser from "body-parser";
+import * as express from 'express'
+import { Application } from 'express'
 
 class App {
-    public express: express.Application;
+    public app: Application;
+    public port: number | string | boolean;
 
-    constructor() {
-        this.express = express();
-        this.middleware();
-        this.routes();
+    constructor(appInit: { port: number | string | boolean; middleWares: any; controllers: any; }) {
+        this.app = express();
+        this.port = appInit.port;
+
+        this.middleware(appInit.middleWares);
+        this.routes(appInit.controllers);
     }
 
-    private middleware(): void {
-        this.express.use(bodyParser.json());
-        this.express.use(bodyParser.urlencoded({ extended: false }));
+    private middleware(middleWares: { forEach: (arg0: (middleWare: any) => void) => void; }): void {
+        middleWares.forEach(middleWare => {
+            this.app.use(middleWare);
+        })
     }
 
-    private routes(): void {
-        let router = express.Router();
-        router.get("/", (req, res, next) => {
-            res.json({
-                message: "Hello World!"
-            });
-        });
-        this.express.set("port", process.env.PORT || 1337);
-        this.express.use("/", router);
+    private routes(controllers: { forEach: (arg0: (controller: any) => void) => void; }): void {
+        controllers.forEach(controller => {
+            this.app.use("/", controller.router);
+        })
+    }
+
+    public listen(): void {
+        this.app.listen(this.port, () => {
+            console.log(`App listening on http://localhost:${this.port}`);
+            console.log(`App environment: ${process.env.NODE_ENV}`);
+        })
     }
 }
 
-export default new App().express;
+export default App;

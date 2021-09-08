@@ -33,17 +33,30 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="src\server.ts" />
+    <Content Include="src\middleware\logger.ts" />
+    <Content Include="views\home\index.pug" />
+    <Content Include="test\starships.test.ts">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="tsconfig.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="src\controllers\" />
+    <Folder Include="src\middleware\" />
+    <Folder Include="src\interfaces\" />
+    <Folder Include="views\" />
+    <Folder Include="views\home\" />
+    <Folder Include="test\" />
     <Folder Include="src\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="src\app.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="src\controllers\home.controllers.ts" />
+    <TypeScriptCompile Include="src\interfaces\IControllerBase.interface.ts" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
