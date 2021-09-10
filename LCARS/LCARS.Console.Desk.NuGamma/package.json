@@ -2,17 +2,15 @@
   "name": "lcars.console.desk.nu-gamma",
   "version": "0.0.0",
   "description": "LCARS.Console.Desk.NuGamma",
-  "main": "dist/server.js",
+  "main": "server",
   "author": {
     "name": ""
   },
   "scripts": {
-    "build": "tsc -p .",
+    "build": "tsc --build",
     "clean": "tsc --build --clean",
-    "start": "npm run build -- -w",
     "test": "mocha --reporter spec --compilers ts:ts-node/register 'test/**/*.test.ts'",
-    "watch-node": "nodemon dist/server.js",
-    "watch-ts": "tsc -w"
+    "start": "node server"
   },
   "devDependencies": {
     "@types/chai": "^3.5.0",

@@ -1,17 +1,13 @@
 {
   "compilerOptions": {
-    "lib": [ "es6" ],
     "module": "commonjs",
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "sourceMap": true,
-    "target": "es6"
+    "target": "es6",
+    "lib": [ "es6" ],
+    "outDir": "dist",
+    "sourceMap": true
   },
   "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "src/**/*.ts",
-    "views/**/*.pug"
+    "node_modules",
+    "test"
   ]
 }
