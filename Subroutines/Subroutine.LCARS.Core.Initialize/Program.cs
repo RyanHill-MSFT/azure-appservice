@@ -20,7 +20,7 @@ namespace Subroutine.LCARS.Core.Initialize
                 var configuration = hostContext.Configuration;
                 var provider = configuration.GetValue("Provider", "Sqlite").ToLower();
 
-                services.AddDbContext<Databank>(
+                services.AddDbContext<LcarsDatabase>(
                     options => _ = provider switch
                     {
                         "sqlite" => options.UseSqlite(configuration.GetConnectionString("SqliteConnection")),

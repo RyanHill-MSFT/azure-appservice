@@ -15,10 +15,10 @@ namespace LCARS.Command.Processor.Delta.Controllers
     [Route("api/[controller]")]
     public class OfficersController : ControllerBase
     {
-        private readonly Databank _databank;
+        private readonly LcarsDatabase _databank;
         private readonly ILogger<OfficersController> _logger;
 
-        public OfficersController(Databank databank, ILogger<OfficersController> logger)
+        public OfficersController(LcarsDatabase databank, ILogger<OfficersController> logger)
         {
             _databank = databank;
             _logger = logger;

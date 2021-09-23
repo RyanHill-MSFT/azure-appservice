@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LCARS.Core.Migrations
 {
-    [DbContext(typeof(Databank))]
+    [DbContext(typeof(LcarsDatabase))]
     [Migration("20210410015015_InitialCreate")]
     partial class InitialCreate
     {

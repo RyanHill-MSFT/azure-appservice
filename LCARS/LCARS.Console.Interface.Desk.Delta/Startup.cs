@@ -26,7 +26,7 @@ namespace LCARS.Interfaces.Console.Desk
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddDbContext<Databank>(options => options.UseSqlServer(Configuration.GetConnectionString("UplinkConnection")));
+            services.AddDbContext<LcarsDatabase>(options => options.UseSqlServer(Configuration.GetConnectionString("UplinkConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

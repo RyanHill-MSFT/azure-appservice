@@ -12,9 +12,9 @@ namespace LCARS.Interfaces.Console.Desk.Pages.Officers
 {
     public class IndexModel : PageModel
     {
-        private readonly Databank _context;
+        private readonly LcarsDatabase _context;
 
-        public IndexModel(Databank context)
+        public IndexModel(LcarsDatabase context)
         {
             _context = context;
         }

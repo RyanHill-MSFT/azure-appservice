@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LCARS.Core.Migrations
 {
-    [DbContext(typeof(Databank))]
-    partial class DatabankModelSnapshot : ModelSnapshot
+    [DbContext(typeof(LcarsDatabase))]
+    partial class LcarsDatabaseModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

@@ -15,7 +15,7 @@ namespace Subroutine.LCARS.Core.Initialize
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var context = services.GetRequiredService<Databank>();
+                    var context = services.GetRequiredService<LcarsDatabase>();
                     context.Database.EnsureDeleted();
                     context.Database.EnsureCreated();
                 }

@@ -29,7 +29,7 @@ namespace LCARS.Command.Processor.Delta
         public void ConfigureServices(IServiceCollection services)
         {
             var provider = Configuration.GetValue("Provider", "InMemory").ToLower();
-            services.AddDbContext<Databank>(
+            services.AddDbContext<LcarsDatabase>(
                     options => _ = provider switch
                     {
                         "inmemory" => options.UseInMemoryDatabase("lcars"),

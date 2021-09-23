@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LCARS.Core
 {
-    public sealed class Databank : DbContext
+    public sealed class LcarsDatabase : DbContext
     {
-        public Databank(DbContextOptions<Databank> options)
+        public LcarsDatabase(DbContextOptions<LcarsDatabase> options)
             : base(options)
         {
         }

@@ -13,9 +13,9 @@ namespace LCARS.Interfaces.Console.Desk.Pages.Officers
 {
     public class EditModel : PageModel
     {
-        private readonly Databank _context;
+        private readonly LcarsDatabase _context;
 
-        public EditModel(Databank context)
+        public EditModel(LcarsDatabase context)
         {
             _context = context;
         }

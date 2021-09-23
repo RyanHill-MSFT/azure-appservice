@@ -12,9 +12,9 @@ namespace LCARS.Interfaces.Console.Desk.Pages.Officers
 {
     public class DeleteModel : PageModel
     {
-        private readonly Databank _context;
+        private readonly LcarsDatabase _context;
 
-        public DeleteModel(Databank context)
+        public DeleteModel(LcarsDatabase context)
         {
             _context = context;
         }

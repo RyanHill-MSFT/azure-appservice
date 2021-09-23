@@ -12,9 +12,9 @@ namespace LCARS.Interfaces.Console.Desk.Pages.Officers
 {
     public class CreateModel : PageModel
     {
-        private readonly Databank _context;
+        private readonly LcarsDatabase _context;
 
-        public CreateModel(Databank context)
+        public CreateModel(LcarsDatabase context)
         {
             _context = context;
         }
