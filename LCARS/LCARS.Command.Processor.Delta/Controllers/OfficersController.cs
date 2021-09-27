@@ -15,16 +15,37 @@ namespace LCARS.Command.Processor.Delta.Controllers
     [Route("api/[controller]")]
     public class OfficersController : ControllerBase
     {
-        private readonly LcarsDatabase _databank;
+        private readonly LcarsDatabase _context;
         private readonly ILogger<OfficersController> _logger;
 
-        public OfficersController(LcarsDatabase databank, ILogger<OfficersController> logger)
+        public OfficersController(LcarsDatabase context, ILogger<OfficersController> logger)
         {
-            _databank = databank;
+            _context = context;
             _logger = logger;
         }
 
         [HttpGet]
-        public async Task<IEnumerable<Officer>> GetAsync() => await _databank.Officers.ToListAsync();
+        public async Task<ActionResult<IEnumerable<Officer>>> GetAllAsync() => await _context.Officers.ToListAsync();
+
+        [HttpGet("{serialNo}")]
+        public async Task<ActionResult<Officer>> GetAsync(string serialNo)
+        {
+            var officer = await _context.Officers.FindAsync(serialNo);
+            if(officer == null)
+            {
+                return NotFound();
+            }
+
+            return officer;
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Officer>> PostAsync(Officer officer)
+        {
+            _context.Officers.Add(officer);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetAllAsync), new { id = officer.SerialNo }, officer);
+        }
     }
 }
