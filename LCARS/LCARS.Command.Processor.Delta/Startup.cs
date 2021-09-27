@@ -32,8 +32,7 @@ namespace LCARS.Command.Processor.Delta
                 _ => throw new InvalidOperationException($"Unsupported provider: {provider}")
             });
 
-            services.AddControllers();
-            services.AddSpaStaticFiles();
+            services.AddControllersWithViews();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
