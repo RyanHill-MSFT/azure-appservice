@@ -25,10 +25,10 @@ namespace LCARS.Command.Processor.Delta.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Officer>>> GetAllAsync() => await _context.Officers.ToListAsync();
+        public async Task<ActionResult<IEnumerable<Officer>>> GetAsync() => await _context.Officers.ToListAsync();
 
         [HttpGet("{serialNo}")]
-        public async Task<ActionResult<Officer>> GetAsync(string serialNo)
+        public async Task<ActionResult<Officer>> GetBySerialNoAsync(string serialNo)
         {
             var officer = await _context.Officers.FindAsync(serialNo);
             if(officer == null)
@@ -45,7 +45,7 @@ namespace LCARS.Command.Processor.Delta.Controllers
             _context.Officers.Add(officer);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetAllAsync), new { id = officer.SerialNo }, officer);
+            return CreatedAtAction(nameof(GetBySerialNoAsync), new { serialNo = officer.SerialNo }, officer);
         }
     }
 }

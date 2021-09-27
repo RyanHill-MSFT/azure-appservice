@@ -24,17 +24,16 @@ namespace LCARS.Command.Processor.Delta
         public void ConfigureServices(IServiceCollection services)
         {
             var provider = Configuration.GetValue("Provider", "InMemory").ToLower();
-            services.AddDbContext<LcarsDatabase>(
-                    options => _ = provider switch
-                    {
-                        "inmemory" => options.UseInMemoryDatabase("lcars"),
-                        "sqlite" => options.UseSqlite(Configuration.GetConnectionString("SqliteConnection")),
-                        "sqlserver" => options.UseSqlServer(Configuration.GetConnectionString("SqlServerConnection")),
-                        _ => throw new InvalidOperationException($"Unsupported provider: {provider}")
-                    });
+            services.AddDbContext<LcarsDatabase>(options => _ = provider switch
+            {
+                "inmemory" => options.UseInMemoryDatabase("lcars"),
+                "sqlite" => options.UseSqlite(Configuration.GetConnectionString("SqliteConnection")),
+                "sqlserver" => options.UseSqlServer(Configuration.GetConnectionString("SqlServerConnection")),
+                _ => throw new InvalidOperationException($"Unsupported provider: {provider}")
+            });
 
             services.AddControllers();
-
+            services.AddSpaStaticFiles();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -76,9 +75,8 @@ namespace LCARS.Command.Processor.Delta
                 app.UseDeveloperExceptionPage();
             }
 
-            // Enable middleware to serve generated Swagger as JSON endpoint
+            // Enable middleware to serve generated Swagger UI as JSON endpoint
             app.UseSwagger();
-            // Enable middleware to serve swagger-ui at JSON endpoint
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "LCARS Command Processor");
