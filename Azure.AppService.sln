@@ -29,11 +29,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{64E5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{4B5568A9-338C-41AB-830A-454E5CAC565A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LCARS.Console.Interface.Desk.Chi", "LCARS\LCARS.Console.Interface.Desk.Chi\LCARS.Console.Interface.Desk.Chi.csproj", "{39E9BA30-0A82-4DE9-9E3A-3FE2B09E6A21}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LCARS.Console.Interface.Chi", "LCARS\LCARS.Console.Interface.Chi\LCARS.Console.Interface.Chi.csproj", "{39E9BA30-0A82-4DE9-9E3A-3FE2B09E6A21}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LCARS.Console.Interface.Desk.Delta", "LCARS\LCARS.Console.Interface.Desk.Delta\LCARS.Console.Interface.Desk.Delta.csproj", "{FBC41D1A-5161-4814-830A-98B40F0DEFF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LCARS.Console.Interface.Delta", "LCARS\LCARS.Console.Interface.Delta\LCARS.Console.Interface.Delta.csproj", "{FBC41D1A-5161-4814-830A-98B40F0DEFF2}"
 EndProject
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "LCARS.Console.Desk.NuGamma", "LCARS\LCARS.Console.Desk.NuGamma\LCARS.Console.Desk.NuGamma.njsproj", "{A52CE505-462A-43E0-A3C6-C510E526E871}"
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "LCARS.Console.Interface.NuGamma", "LCARS\LCARS.Console.Interface.NuGamma\LCARS.Console.Interface.NuGamma.njsproj", "{A52CE505-462A-43E0-A3C6-C510E526E871}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subroutine.Security", "Subroutines\Subroutine.Security\Subroutine.Security.csproj", "{56313072-D88A-4B0A-9B45-BFDAB1A8D8CD}"
 EndProject
