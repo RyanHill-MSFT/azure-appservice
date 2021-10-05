@@ -5,6 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "node",
+            "request": "attach",
+            "name": "Docker: Attach to Node",
+            "remoteRoot": "/usr/src/app"
+        },
+        {
             "type": "pwa-msedge",
             "request": "launch",
             "name": "Launch Edge against localhost",
@@ -17,6 +23,13 @@
             "request": "launch",
             "preLaunchTask": "docker-run: debug",
             "platform": "node"
+        },
+        {
+            "name": "Attach to Node Functions",
+            "type": "node",
+            "request": "attach",
+            "port": 9229,
+            "preLaunchTask": "func: host start"
         }
     ]
 }
