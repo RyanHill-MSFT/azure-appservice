@@ -25,7 +25,7 @@ namespace LCARS.Command.Processor.Delta.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Officer>>> GetAsync() => await _context.Officers.ToListAsync();
+        public async Task<ActionResult<IEnumerable<Officer>>> GetAllAsync() => await _context.Officers.ToListAsync();
 
         [HttpGet("{serialNo}")]
         public async Task<ActionResult<Officer>> GetBySerialNoAsync(string serialNo)

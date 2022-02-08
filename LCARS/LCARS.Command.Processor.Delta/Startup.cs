@@ -33,6 +33,10 @@ namespace LCARS.Command.Processor.Delta
             });
 
             services.AddControllersWithViews();
+            services.AddSpaStaticFiles(c =>
+            {
+                c.RootPath = "ClientApp/build";
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -73,6 +77,9 @@ namespace LCARS.Command.Processor.Delta
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseStaticFiles();
+            app.UseSpaStaticFiles();
 
             // Enable middleware to serve generated Swagger UI as JSON endpoint
             app.UseSwagger();
