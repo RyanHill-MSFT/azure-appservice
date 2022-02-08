@@ -9,7 +9,7 @@ namespace Subroutine.Command.Sequencer.Scan
 {
     class Program
     {
-        static async void Main()
+        static void Main()
         {
             var host = new HostBuilder()
                 .UseEnvironment("Development")
@@ -19,7 +19,9 @@ namespace Subroutine.Command.Sequencer.Scan
                 })
                 .ConfigureWebJobs(b =>
                 {
-                    b.AddAzureStorageCoreServices().AddTimers();
+                    b.AddAzureStorageCoreServices();
+                    b.AddAzureStorage();
+                    b.AddTimers();
                 })
                 .ConfigureLogging((context, b) =>
                 {
@@ -30,7 +32,7 @@ namespace Subroutine.Command.Sequencer.Scan
 
             using (host)
             {
-                await host.RunAsync();
+                host.Run();
             }
         }
     }
