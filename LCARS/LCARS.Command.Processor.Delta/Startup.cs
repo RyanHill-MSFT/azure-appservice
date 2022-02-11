@@ -3,6 +3,7 @@ using LCARS.Core;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -35,7 +36,7 @@ namespace LCARS.Command.Processor.Delta
             services.AddControllersWithViews();
             services.AddSpaStaticFiles(c =>
             {
-                c.RootPath = "ClientApp/build";
+                c.RootPath = "clientapp";
             });
             services.AddSwaggerGen(c =>
             {
