@@ -20,28 +20,8 @@ namespace LCARS.Console.Interface.Delta.Pages
             _logger = logger;
         }
 
-        public async Task OnGet()
+        public void OnGet()
         {
-            var credential = new DefaultAzureCredential();
-            var token = credential.GetToken(
-                new Azure.Core.TokenRequestContext(
-                    new[] { "https://graph.microsoft.com/.default" }));
-
-            var accessToken = token.Token;
-            var graphServiceClient = new GraphServiceClient(
-                new DelegateAuthenticationProvider((requestMessage) =>
-                {
-                    requestMessage.Headers
-                    .Authorization = new AuthenticationHeaderValue("bearer", accessToken);
-
-                    return Task.CompletedTask;
-                }));
-
-            try
-            {
-                var users = await graphServiceClient.Users.Request().GetAsync();
-
-            }
         }
     }
 }
